@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Veiron Auto - Simplu Si Rapid | Inchirieri Auto</title>
+    <meta name="description" content="Veiron Auto - Servicii de inchiriere auto rapide si simple. Masini noi, livrare gratuita, rezervare 24/7.">    <!-- External Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/booking-layout.css">
+    <script
+  src="https://js-de.sentry-cdn.com/d80f93dbbc66e85cc37113a61c010cd2.min.js"
+  crossorigin="anonymous"
+></script>
+</head>
+<body id="top">
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <!-- Main navigation bar with logo and menu links -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+            <div class="nav-container">
+                <!-- Navigation Menu Links -->
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#acasa" class="nav-link">ACASA</a></li>
+                    <li class="nav-item"><a href="#rezervare" class="nav-link">REZERVARE</a></li>
+                    <li class="nav-item"><a href="#servicii" class="nav-link">SERVICII</a></li>
+                    <li class="nav-item"><a href="#parc-auto" class="nav-link">PARC AUTO</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+                <!-- Language Switcher Buttons -->
+                <div class="lang-switcher">
+                    <!-- Romanian Button -->
+                    <button class="lang-btn active" data-lang="ro" id="lang-ro">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDMzQTAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjQ0UxMTI2Ii8+Cjwvc3ZnPgo=" alt="Romanian Flag">
+                        <span data-i18n="romanian">ROMÂNĂ</span>
+                    </button>
+                    <!-- English Button -->
+                    <button class="lang-btn" data-lang="en" id="lang-en" onclick="window.location.href='index-en.html'">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQjIyMjM0Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIyLjMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI0LjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI2LjkiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI5LjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIxMS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeT0iMTMuOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHdpZHRoPSI3LjciIGhlaWdodD0iNy43IiBmaWxsPSIjM0MzQjZFIi8+Cjwvc3ZnPgo=" alt="US Flag">
+                        <span data-i18n="english">ENGLISH</span>
+                    </button>
+                </div>
+                <!-- Mobile Menu Toggle (hamburger) -->
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HERO SECTION: Fleet Showcase with Swiper Slider -->
+    <section class="hero-section" id="acasa">
+        <div class="fleet-showcase">
+            <!-- Swiper Slider for Fleet Images -->
+            <div class="swiper fleet-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Each .swiper-slide is a car category (Economy, Premium, SUV, etc.) -->
+                    <!-- Slide 1 - Economy Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Economy Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Economice</h3>
+                                    <p>Perfecte pentru deplasarile zilnice in oras</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 15+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 25€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Luxury Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Luxury Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Premium</h3>
+                                    <p>Eleganta si confort pentru ocazii speciale</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 8+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 80€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - SUV Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="SUV Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>SUV & Family</h3>
+                                    <p>Spatioase si sigure pentru intreaga familie</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 12+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 45€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 - Sports Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sports Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Sport</h3>
+                                    <p>Performanta si adrenalina pentru experiente unice</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 5+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 150€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 - Electric Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Electric Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Electrice</h3>
+                                    <p>Eco-friendly si tehnologie de ultima generatie</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 6+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 35€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper Navigation & Pagination -->
+                <div class="swiper-button-next fleet-next"></div>
+                <div class="swiper-button-prev fleet-prev"></div>
+                <div class="swiper-pagination fleet-pagination"></div>
+                <div class="swiper-scrollbar fleet-scrollbar"></div>
+            </div>
+            <!-- Fleet Info Banner with stats -->
+            <div class="fleet-info-banner">
+                <div class="fleet-info-content">
+                    <!-- Each .fleet-stat-item is a stat (vehicles, insurance, support, rating) -->
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Vehicule Disponibile</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Asigurate Complet</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Service & Support</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Rating Clienti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BOOKING SECTION: Reservation Form -->
+    <section class="booking-section" id="rezervare">
+        <div class="container">
+            <div class="booking-flex-container">
+                <!-- Booking Info Side (image, features) -->
+                <div class="booking-info-side">
+                    <div class="card shadow-lg border-0 h-100">
+                        <div class="card-body d-flex flex-column booking-info-content">
+                            <div class="booking-image-card">
+                                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car">
+                            </div>
+                            <div class="booking-info-list mt-auto">
+                                <div class="info-item">
+                                    <i class="fas fa-car"></i> <span>40+ Modele</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i> <span>Disponibile 24/7</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-shield-alt"></i> <span>100% Asigurate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Booking Form Side -->
+                <div class="booking-form-side">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-4">
+                            <h2 class="card-title text-center mb-4">Completeaza Rezervarea</h2>
+                            <!-- Booking Form Fields -->
+                            <form id="bookingForm">
+                                <div class="row g-3">
+                                    <!-- Pickup Location Dropdown -->
+                                    <div class="col-12">
+                                        <label for="pickupLocation" class="form-label fw-semibold" data-i18n="pickup_location">Locatia de ridicare</label>
+                                        <select id="pickupLocation" name="pickupLocation" class="form-select form-select-lg" required>
+                                            <option value="" data-i18n="select_pickup_location">Selecteaza locatia de ridicare</option>
+                                            <option value="satu-mare">Satu Mare</option>
+                                            <option value="baia-mare">Baia Mare</option>
+                                            <option value="oradea">Oradea</option>
+                                            <option value="cluj-napoca">Cluj-Napoca</option>
+                                            <option value="debrecen-airport">Debrecen - Airport</option>
+                                            <option value="budapesta-airport">Budapesta - Airport</option>
+                                        </select>
+                                        
+                                        <div class="form-check mt-2">
+                                            <input type="checkbox" class="form-check-input" id="differentDropoff" name="differentDropoff">
+                                            <label class="form-check-label" for="differentDropoff" data-i18n="different_dropoff">Locatie diferita de returnare</label>
+                                        </div>
+                                    </div>
+                                    <!-- Pickup Date & Time -->
+                                    <div class="col-md-6">
+                                        <label for="pickupDate" class="form-label fw-semibold" data-i18n="pickup">Ridicare</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                            <input type="date" id="pickupDate" name="pickupDate" class="form-control form-control-lg" required>
+                                        </div>
+                                        <select id="pickupTime" name="pickupTime" class="form-select form-select-lg mt-2" required>
+                                            <option value="" data-i18n="select_time">Selecteaza ora</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00" selected>10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                        </select>
+                                    </div>
+                                    <!-- Dropoff Date & Time -->
+                                    <div class="col-md-6">
+                                        <label for="dropoffDate" class="form-label fw-semibold" data-i18n="dropoff">Returnare</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                            <input type="date" id="dropoffDate" name="dropoffDate" class="form-control form-control-lg" required>
+                                        </div>
+                                        <select id="dropoffTime" name="dropoffTime" class="form-select form-select-lg mt-2" required>
+                                            <option value="" data-i18n="select_time">Selecteaza ora</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00" selected>10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                        </select>
+                                    </div>
+                                    <!-- Different Dropoff Checkbox -->
+                                    <div class="col-12">
+                                        <div class="alert alert-light border-success">
+                                            <div class="form-check mb-2">
+                                                <input type="checkbox" class="form-check-input" id="hasLicense" name="hasLicense" checked>
+                                                <label class="form-check-label" for="hasLicense">
+                                                    Am permisul de conducere de cel putin 1 an
+                                                    <i class="fas fa-info-circle text-primary ms-1" title="Permisul de conducere trebuie sa fie valabil si sa aiba cel putin 1 an vechime"></i>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="travelAbroad" name="travelAbroad">
+                                                <label class="form-check-label" for="travelAbroad">
+                                                    Doresc sa calatoresc in strainatate
+                                                    <i class="fas fa-info-circle text-primary ms-1" title="Pentru calatoriile in strainatate sunt necesare documente suplimentare"></i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Submit Button -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success btn-lg w-100 py-3">
+                                            <i class="fas fa-search me-2"></i>
+                                            Cauta Masini Disponibile
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES SECTION: List of Service Cards -->
+    <section class="services-section" id="servicii">
+        <div class="container">
+            <h2 class="section-title">Serviciile Noastre</h2>
+            <p class="section-subtitle">Servicii complete de inchiriere auto</p>
+            <div class="services-grid">
+                <!-- Each .service-card is a service offered (e.g., Airport Transfer, Insurance, etc.) -->
+                <!-- Service Card 1 - Inchirieri Auto -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Inchirieri Auto" class="service-img">
+                        <div class="service-overlay">
+                            <i class="fas fa-car service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Inchirieri Auto</h3>
+                        <p class="service-description">Oferim servicii complete de inchiriere auto cu livrare gratuita si disponibilitate 24/7 in toata tara.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 - Consultanta De Specialitate -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultanta Specialitate" class="service-img">
+                        <div class="service-overlay">
+                            <i class="fas fa-clipboard-list service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Consultanta De Specialitate</h3>
+                        <p class="service-description">Te sfatuim si indrumam pentru achizitionarea unui autoturism de inalta calitate si siguranta maxima.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 - Intermedieri Acte -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intermedieri Acte" class="service-img">
+                        <div class="service-overlay">
+                            <i class="fas fa-file-contract service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Intermedieri Acte</h3>
+                        <p class="service-description">Realizam inmatriculari, redactam contracte auto si asigurari RCA/CASCO pentru masina dumneavoastra.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 - Constatare Dauna -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Constatare Dauna" class="service-img">
+                        <div class="service-overlay">
+                            <i class="fas fa-clipboard-check service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Constatare Daună și Notificare Asigurator</h3>
+                        <p class="service-description">Asistenta completa pentru constatarea daunelor si notificarea companiei de asigurari in cel mai scurt timp.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 - Masina la Schimb -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Masina la Schimb" class="service-img">
+                        <div class="service-overlay">
+                            <i class="fas fa-exchange-alt service-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Mașină la Schimb pe Durata Service-ului</h3>
+                        <p class="service-description">Oferim masina de inlocuire gratuita pe toata durata reparatiei pentru a nu va afecta programul zilnic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FLEET SECTION: Car Categories and Details -->
+    <section class="fleet-section" id="parc-auto">
+        <div class="fleet-showcase">
+            <!-- Swiper Slider for Fleet -->
+            <div class="swiper fleet-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Each .swiper-slide is a car category (Economy, Premium, SUV, etc.) -->
+                    <!-- Slide 1 - Economy Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Economy Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Economice</h3>
+                                    <p>Perfecte pentru deplasarile zilnice in oras</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 15+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 25€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Luxury Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Luxury Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Premium</h3>
+                                    <p>Eleganta si confort pentru ocazii speciale</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 8+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 80€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - SUV Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="SUV Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>SUV & Family</h3>
+                                    <p>Spatioase si sigure pentru intreaga familie</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 12+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 45€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 - Sports Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Sports Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Sport</h3>
+                                    <p>Performanta si adrenalina pentru experiente unice</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 5+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 150€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 - Electric Cars -->
+                    <div class="swiper-slide">
+                        <div class="fleet-slide">
+                            <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Electric Cars Fleet" class="fleet-image">
+                            <div class="fleet-overlay">
+                                <div class="fleet-content">
+                                    <h3>Masini Electrice</h3>
+                                    <p>Eco-friendly si tehnologie de ultima generatie</p>
+                                    <div class="fleet-stats">
+                                        <span><i class="fas fa-car"></i> 6+ Vehicule</span>
+                                        <span><i class="fas fa-euro-sign"></i> De la 35€/zi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper Navigation & Pagination -->
+                <div class="swiper-button-next fleet-next"></div>
+                <div class="swiper-button-prev fleet-prev"></div>
+                <div class="swiper-pagination fleet-pagination"></div>
+                <div class="swiper-scrollbar fleet-scrollbar"></div>
+            </div>
+            <!-- Fleet Info Banner -->
+            <div class="fleet-info-banner">
+                <div class="fleet-info-content">
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Vehicule Disponibile</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Asigurate Complet</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Service & Support</span>
+                        </div>
+                    </div>
+                    <div class="fleet-stat-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <span class="stat-number">4.9</span>
+                            <span class="stat-label">Rating Clienti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SECTION: Contact Form and Info -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Contacteaza-ne pentru mai multe informatii</p>
+            <!-- Contact content will be added later -->
+        </div>
+    </section>
+    <!-- Coverage Area Section -->
+    <section class="coverage-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-3">Zone de Acoperire</h2>
+                    <p class="lead text-muted">Servicii de inchiriere auto in mai multe orase si aeroporturi</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="coverage-item">
+                        <div class="coverage-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Satu Mare</h5>
+                        <p class="text-muted">Centru si zone limitrofe</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="coverage-item">
+                        <div class="coverage-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Baia Mare</h5>
+                        <p class="text-muted">Centru si zone limitrofe</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="coverage-item">
+                        <div class="coverage-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="fw-bold">Cluj-Napoca</h5>
+                        <p class="text-muted">Centru si zone limitrofe</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="coverage-item">
+                        <div class="coverage-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5 class="fw-bold">Debrecen Airport</h5>
+                        <p class="text-muted">Servicii aeroportuare</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="coverage-item">
+                        <div class="coverage-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h5 class="fw-bold">Budapesta Airport</h5>
+                        <p class="text-muted">Servicii aeroportuare</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info text-center border-0">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Livrare si ridicare gratuita in toate zonele de acoperire</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating contact buttons -->
+    <div class="floating-contacts">
+        <a href="mailto:contact@veironauto.ro" class="contact-btn email" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+40123456789" class="contact-btn phone" title="Telefon">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/40123456789" class="contact-btn whatsapp" title="WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#top" class="contact-btn to-top" title="Inapoi sus" id="toTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/swiper-components.js"></script>
+    <script src="assets/js/booking.js"></script>
+    <script src="assets/js/formular-rezervare.js"></script>
+    <script src="assets/js/sentry.js"></script>
+</body>
+</html>

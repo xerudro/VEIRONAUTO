@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parc Auto - Veiron Auto | Flota Completa de Vehicule</title>
+    <meta name="description" content="Descopera parcul nostru auto complet - masini economice, premium, SUV-uri si vehicule comerciale disponibile pentru inchiriere.">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body id="top">
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#acasa" class="nav-link active" data-i18n="home">ACASA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#despre-noi" class="nav-link">DESPRE NOI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicii" class="nav-link" data-i18n="services">SERVICII</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="parc-auto.html" class="nav-link" data-i18n="fleet">PARC AUTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-i18n="contact">CONTACT</a>
+                    </li>
+                </ul>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ro" id="lang-ro">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDMzQTAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjQ0UxMTI2Ii8+Cjwvc3ZnPgo=" alt="Romanian Flag">
+                        <span data-i18n="romanian">ROMÂNĂ</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en" id="lang-en" onclick="window.location.href='fleet.html'">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQjIyMjM0Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIyLjMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI0LjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI2LjkiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI5LjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIxMS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeT0iMTMuOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHdpZHRoPSI3LjciIGhlaWdodD0iNy43IiBmaWxsPSIjM0MzQjZFIi8+Cjwvc3ZnPgo=" alt="US Flag">
+                        <span data-i18n="english">ENGLISH</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero-section">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 data-i18n="fleet_title">Parcul Nostru Auto</h1>
+                <p class="page-hero-subtitle" data-i18n="fleet_subtitle">Descopera gama completa de vehicule disponibile pentru inchiriere</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Acasa</a>
+                    <span>/</span>
+                    <span>Parc Auto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Categories Section -->
+    <section class="fleet-categories-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="categories_title">Categorii de Vehicule</h2>
+            <p class="section-subtitle" data-i18n="categories_subtitle">Alege categoria potrivita pentru nevoile tale</p>
+            
+            <div class="fleet-categories-grid">
+                <!-- Economy Cars -->
+                <div class="fleet-category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Masini Economice" class="category-img">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3 data-i18n="economy_cars">Masini Economice</h3>
+                                <p data-i18n="economy_desc">Perfecte pentru deplasarile zilnice</p>
+                                <span class="price-range" data-i18n="from_25">De la 25€/zi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-details">
+                        <h4>Caracteristici:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Consum redus de combustibil</li>
+                            <li><i class="fas fa-check"></i> Usor de condus in oras</li>
+                            <li><i class="fas fa-check"></i> Parcarea simpla</li>
+                            <li><i class="fas fa-check"></i> Ideal pentru 2-4 persoane</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Premium Cars -->
+                <div class="fleet-category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Masini Premium" class="category-img">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3 data-i18n="premium_cars">Masini Premium</h3>
+                                <p data-i18n="premium_desc">Eleganta si confort superior</p>
+                                <span class="price-range" data-i18n="from_80">De la 80€/zi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-details">
+                        <h4>Caracteristici:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Interior de lux</li>
+                            <li><i class="fas fa-check"></i> Tehnologie avansata</li>
+                            <li><i class="fas fa-check"></i> Performante superioare</li>
+                            <li><i class="fas fa-check"></i> Ideal pentru evenimente speciale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SUV Cars -->
+                <div class="fleet-category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SUV-uri" class="category-img">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3 data-i18n="suv_cars">SUV-uri</h3>
+                                <p data-i18n="suv_desc">Spatiu si versatilitate</p>
+                                <span class="price-range" data-i18n="from_60">De la 60€/zi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-details">
+                        <h4>Caracteristici:</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Spatiu generos</li>
+                            <li><i class="fas fa-check"></i> Pozitie inalta de condus</li>
+                            <li><i class="fas fa-check"></i> Capacitate mare de bagaje</li>
+                            <li><i class="fas fa-check"></i> Ideal pentru familii</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Gallery Section -->
+    <section class="fleet-gallery-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="gallery_title">Galeria Vehiculelor</h2>
+            <p class="section-subtitle" data-i18n="gallery_subtitle">Cateva din vehiculele din flota noastra</p>
+            
+            <div class="fleet-gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="BMW Seria 3" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="bmw_3">BMW Seria 3</h4>
+                        <p data-i18n="bmw_3_desc">Premium • Automata • 45€/zi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audi A4" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="audi_a4">Audi A4</h4>
+                        <p data-i18n="audi_a4_desc">Premium • Automata • 50€/zi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1494976688153-c785a4cb3905?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mercedes C-Class" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="mercedes_c">Mercedes C-Class</h4>
+                        <p data-i18n="mercedes_c_desc">Premium • Automata • 55€/zi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Volkswagen Golf" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="vw_golf">Volkswagen Golf</h4>
+                        <p data-i18n="vw_golf_desc">Economic • Manuala • 25€/zi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Toyota RAV4" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="toyota_rav4">Toyota RAV4</h4>
+                        <p data-i18n="toyota_rav4_desc">SUV • Automata • 60€/zi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Honda CR-V" class="gallery-img">
+                    <div class="gallery-info">
+                        <h4 data-i18n="honda_crv">Honda CR-V</h4>
+                        <p data-i18n="honda_crv_desc">SUV • Automata • 65€/zi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="booking-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Rezerva Acum Vehiculul Dorit</h2>
+                <p>Contacteaza-ne pentru disponibilitate si tarife personalizate</p>
+                <div class="cta-buttons">
+                    <a href="tel:+40123456789" class="cta-btn primary">
+                        <i class="fas fa-phone"></i>
+                        Suna Acum
+                    </a>
+                    <a href="https://wa.me/40123456789" class="cta-btn secondary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating contact buttons -->
+    <div class="floating-contacts">
+        <a href="mailto:contact@veironauto.ro" class="contact-btn email" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+40123456789" class="contact-btn phone" title="Telefon">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/40123456789" class="contact-btn whatsapp" title="WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#top" class="contact-btn to-top" title="Inapoi sus" id="toTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/swiper-components.js"></script>
+    <script src="assets/js/booking.js"></script>
+</body>
+</html>

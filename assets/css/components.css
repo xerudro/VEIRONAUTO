@@ -1,0 +1,551 @@
+/*
+ * Veiron Auto - Components Styles
+ * Contains styles for cards (service, car, testimonial, category), buttons, and other UI components.
+ */
+
+/* ==========================================================================
+   Button Styles (General & CTA)
+   ========================================================================== */
+
+.choose-car-btn { /* Homepage Hero Button */
+    width: 100%;
+    background: linear-gradient(45deg, #52c41a, #389e0d);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.choose-car-btn:hover {
+    background: linear-gradient(45deg, #389e0d, #237804);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(82, 196, 26, 0.3);
+}
+
+.choose-car-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.book-now-btn { /* Featured Car Card Button */
+    background: linear-gradient(45deg, #52c41a, #389e0d);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.book-now-btn:hover {
+    background: linear-gradient(45deg, #389e0d, #237804);
+    transform: translateY(-2px);
+}
+
+.car-select-btn { /* Booking Page Car Card Button */
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners to match card */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto; /* Pushes button to the bottom of flex card */
+}
+
+.car-select-btn:hover {
+    background: linear-gradient(135deg, #5a6fcf, #673c8f);
+    transform: translateY(-1px); /* Subtle lift */
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+}
+
+.cta-btn.primary {
+    background: white;
+    color: #667eea;
+}
+
+.cta-btn.primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Floating Contact Buttons & Back to Top
+   ========================================================================== */
+
+.floating-contacts {
+    position: fixed;
+    right: 2rem;
+    bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 999;
+}
+
+.contact-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.contact-btn.email {
+    background: #e74c3c;
+}
+
+.contact-btn.phone {
+    background: #3498db;
+}
+
+.contact-btn.whatsapp {
+    background: #25d366;
+}
+
+.contact-btn.to-top {
+    background: #6c63ff;
+}
+
+.contact-btn:hover {
+    filter: brightness(1.1);
+}
+
+.back-to-top-btn { 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px); 
+}
+
+.back-to-top-btn i {
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-to-top-btn:hover i {
+    transform: scale(1.1); 
+}
+
+/* ==========================================================================
+   Service Card Styles
+   ========================================================================== */
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 460px;
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-img {
+    transform: scale(1.1);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: white;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-content {
+    padding: 30px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.service-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Testimonial Card Styles
+   ========================================================================== */
+
+.testimonial-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-content {
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Fleet Category Card Styles (Parc Auto Page)
+   ========================================================================== */
+
+.fleet-category-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.fleet-category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.category-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fleet-category-card:hover .category-img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: white;
+}
+
+.fleet-category-card:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.price-range {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.category-details {
+    padding: 30px;
+}
+
+.category-details h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.category-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.category-details li i {
+    color: #667eea;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for CTA buttons */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Responsive adjustments for Car Cards (Booking Page) */
+@media (max-width: 1400px) {
+    .car-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .car-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .car-specs {
+        justify-content: space-between;
+        padding: 12px 15px;
+    }
+    
+    .spec-item {
+        font-size: 0.8rem;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card-header {
+        padding: 15px 15px 8px;
+    }
+    
+    .car-card-header h3 {
+        font-size: 1rem;
+    }
+    .car-image-container {
+        /* padding: 10px; */ /* Reconsider if this is needed or if image should be edge-to-edge */
+        min-height: 160px; /* Adjusted min-height */
+    }
+    
+    /* .car-image { */ /* Styles for car-image itself are global, specific overrides if needed */
+        /* height: 140px; */ /* Example: if you need to shrink image further */
+        /* max-width: 220px; */ /* Example */
+    /* } */
+}
+
+@media (max-width: 600px) {
+    .floating-contacts { right: 1rem; bottom: 1rem; gap: 0.7rem; }
+    .contact-btn { width: 40px; height: 40px; font-size: 1.2rem; }
+}
+
+/* --- CAR CARD STYLES REMOVED FOR DESIGN RESTORATION --- */
+/*
+.car-card { }
+.car-card:hover { }
+.car-card-header { }
+.car-card-header h3 { }
+.car-similar { }
+.car-category { }
+.car-image-container { }
+.car-image { }
+.car-info { }
+.car-info h3 { }
+.car-price { }
+.car-specs { }
+.spec-item { }
+.spec-item i { }
+.car-features { }
+.feature-item { }
+.feature-item i { }
+.car-pricing { }
+.price-main { }
+.price-amount { }
+.price-currency { }
+.price-total { }
+*/

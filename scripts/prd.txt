@@ -1,0 +1,101 @@
+# Product Requirements Document (PRD) - Veiron Auto
+
+## 1. Project Overview
+- **Project Name:** Veiron Auto Website
+- **Type:** Car Rental Website
+- **Languages:** Romanian (primary), English (planned)
+- **Tech Stack:** HTML5, CSS3, Bootstrap 5, JavaScript (ES6+), Swiper.js
+
+## 2. Business Goals
+- Provide a modern, digital-first car rental experience for Romania and Hungary.
+- Enable fast, flexible, and transparent online bookings.
+- Support both business and tourist users with cross-border rental options.
+
+## 3. Core Features
+### 3.1. Booking Flow
+- One-page booking form with:
+  - Pickup location (dropdown, 6 cities)
+  - Option for different dropoff location (checkbox + dynamic dropdown)
+  - Date/time pickers for rental period
+  - Car selection with real-time price display
+  - Additional services: risk assurance, equipment
+  - Reservation summary with cost breakdown (RON/EUR)
+  - Multi-language support (RO/EN)
+  - Form validation with visual feedback
+  - Confirmation step with user data and terms acceptance
+
+### 3.2. Car Selection & Display
+- Car cards with:
+  - Image (static in HTML for SEO)
+  - Model, category, transmission, seats, luggage
+  - Price per day (by rental period)
+  - Badges (e.g., "Most Wanted")
+  - SEO fields: alt, title
+- Pagination module (JS, independent from filtering)
+- Responsive grid layout (Bootstrap)
+
+### 3.3. Additional Services
+- Risk assurance plans (with price, deposit info)
+- Equipment options (child seat, GPS, etc.)
+- Modern, normalized card layout for all services
+
+### 3.4. Swiper Integration
+- Hero banner slider
+- Car gallery with thumbnails
+- Featured cars carousel
+- Testimonials and partners sliders
+- All Swiper components initialized via JS, with responsive breakpoints and lazy loading
+
+### 3.5. Reservation Summary
+- Floating summary bar with real-time updates
+- Navigation buttons (next, back)
+- Consistent UI/UX across languages
+
+### 3.6. Contact & Support
+- Floating contact buttons (phone, WhatsApp, email)
+- Clear display of company contact info
+
+## 4. Technical Requirements
+- **Frontend only** (no backend for MVP)
+- Modular JS: separate files for booking, config, swiper, pagination
+- All images loaded directly in HTML for SEO
+- Config-driven locations and settings (config.js)
+- Responsive design (Bootstrap grid, mobile-first)
+- Accessibility: ARIA labels, keyboard navigation
+- No inline JS in HTML; all scripts external
+- Debug mode in config.js for development
+
+## 5. User Experience Goals
+- Minimal clicks to complete booking
+- Real-time validation and feedback
+- Smooth animations (fade-in/out, transitions)
+- Fast page load (<3s)
+- Mobile-friendly and cross-browser compatible
+- Professional, trustworthy appearance
+
+## 6. Data & Pricing
+- Car and price data as per memory-bank/cars-and-prices.md
+- Prices structured by rental period (1-3, 4-7, 8-14, 15-30 days)
+- Risk assurance and deposit rules per car/plan
+- EUR/RON conversion (1 EUR = 5.07 RON)
+
+## 7. Future Enhancements (for backlog)
+- Backend API for bookings
+- Payment integration (Stripe or similar)
+- User accounts and booking history
+- Real-time car availability
+- Advanced search/filter
+- Reviews and loyalty program
+
+## 8. Non-Functional Requirements
+- Clean, maintainable code (no inline JS, modular structure)
+- Comprehensive documentation (feature docs, memory bank)
+- All user-facing strings ready for i18n
+- Performance optimization (lazy loading, CDN for assets)
+- Security: input validation, XSS prevention
+
+## 9. References
+- See BOOKING_FEATURE.md for booking form details
+- See memory-bank/cars-and-prices.md for pricing
+- See docs/swiper-guide.md for Swiper usage
+- See memory-bank/ for full project context 

@@ -1,0 +1,98 @@
+/*
+ * Veiron Auto - Base Styles
+ * Contains resets, body defaults, .container, animations, and print styles.
+ */
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; 
+}
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative; 
+    z-index: 2; 
+}
+
+/* ==========================================================================
+   Animation Classes (Utilities)
+   ========================================================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    body {
+        font-family: 'Times New Roman', serif; 
+        color: black;
+        background: white;
+    }
+
+    .header,
+    .floating-contacts,
+    .back-to-top-btn,
+    .booking-form, 
+    .swiper-container, 
+    .no-print,
+    .filter-bar,
+    .car-select-btn,
+    .choose-car-btn,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a[href^="http"]:not([href*="veironauto.com"]):after { /* Avoid showing for internal links if not desired */
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .section-title, .page-hero-title {
+        page-break-after: avoid;
+    }
+
+    .car-card, .service-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    .car-image-container img { /* Ensure images are reasonably sized for print */
+        max-width: 150px;
+        height: auto;
+    }
+}

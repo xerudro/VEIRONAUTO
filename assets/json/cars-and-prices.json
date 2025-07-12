@@ -1,0 +1,230 @@
+[
+  {
+    "model": "SKODA SCALA AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 60, "ron": 304},
+      "4-7": {"eur": 57, "ron": 289},
+      "8-14": {"eur": 54, "ron": 274},
+      "15-30": {"eur": 50, "ron": 254}
+    },
+    "garantie_eur": 200,
+    "asigurare_premium": {"eur": 8, "depozit": 100},
+    "asigurare_integrala": {"eur": 15, "depozit": 0}
+  },
+  {
+    "model": "VW T-CROSS AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 70, "ron": 355},
+      "4-7": {"eur": 67, "ron": 340},
+      "8-14": {"eur": 64, "ron": 324},
+      "15-30": {"eur": 60, "ron": 304}
+    },
+    "garantie_eur": 250,
+    "asigurare_premium": {"eur": 9, "depozit": 100},
+    "asigurare_integrala": {"eur": 17, "depozit": 0}
+  },
+  {
+    "model": "SKODA OCTAVIA SEDAN AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 52, "ron": 264},
+      "4-7": {"eur": 48, "ron": 244},
+      "8-14": {"eur": 46, "ron": 233},
+      "15-30": {"eur": 44, "ron": 223}
+    },
+    "garantie_eur": 200,
+    "asigurare_premium": {"eur": 10, "depozit": 100},
+    "asigurare_integrala": {"eur": 18, "depozit": 0}
+  },
+  {
+    "model": "SKODA KAMIQ AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 70, "ron": 355},
+      "4-7": {"eur": 67, "ron": 340},
+      "8-14": {"eur": 64, "ron": 324},
+      "15-30": {"eur": 60, "ron": 304}
+    },
+    "garantie_eur": 250,
+    "asigurare_premium": {"eur": 13, "depozit": 100},
+    "asigurare_integrala": {"eur": 20, "depozit": 0}
+  },
+  {
+    "model": "TOYOTA RAV4 AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 100, "ron": 507},
+      "4-7": {"eur": 95, "ron": 482},
+      "8-14": {"eur": 90, "ron": 456},
+      "15-30": {"eur": 85, "ron": 431}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "SKODA KODIAQ ( 7 locuri) - AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 97, "ron": 492},
+      "4-7": {"eur": 92, "ron": 466},
+      "8-14": {"eur": 88, "ron": 446},
+      "15-30": {"eur": 85, "ron": 431}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "SKODA KODIAQ AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 100, "ron": 507},
+      "4-7": {"eur": 95, "ron": 482},
+      "8-14": {"eur": 90, "ron": 456},
+      "15-30": {"eur": 85, "ron": 431}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "VOLVO XC40 AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 100, "ron": 507},
+      "4-7": {"eur": 95, "ron": 482},
+      "8-14": {"eur": 90, "ron": 456},
+      "15-30": {"eur": 85, "ron": 431}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 13, "depozit": 100},
+    "asigurare_integrala": {"eur": 20, "depozit": 0}
+  },
+  {
+    "model": "BMW X1 AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 100, "ron": 507},
+      "4-7": {"eur": 95, "ron": 482},
+      "8-14": {"eur": 90, "ron": 456},
+      "15-30": {"eur": 80, "ron": 406}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "VOVLO XC60 AUTOMAT NOU",
+    "prices": {
+      "1-3": {"eur": 110, "ron": 558},
+      "4-7": {"eur": 105, "ron": 533},
+      "8-14": {"eur": 100, "ron": 507},
+      "15-30": {"eur": 90, "ron": 456}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "MERCEDES GLC AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 130, "ron": 659},
+      "4-7": {"eur": 120, "ron": 608},
+      "8-14": {"eur": 110, "ron": 558},
+      "15-30": {"eur": 100, "ron": 507}
+    },
+    "garantie_eur": 400,
+    "asigurare_premium": {"eur": 20, "depozit": 100},
+    "asigurare_integrala": {"eur": 28, "depozit": 0}
+  },
+  {
+    "model": "RENAULT TRAFIC ( 8+1 locuri) AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 100, "ron": 507},
+      "4-7": {"eur": 96, "ron": 487},
+      "8-14": {"eur": 90, "ron": 456},
+      "15-30": {"eur": 82, "ron": 416}
+    },
+    "garantie_eur": 400,
+    "asigurare_premium": {"eur": 20, "depozit": 100},
+    "asigurare_integrala": {"eur": 28, "depozit": 0}
+  },
+  {
+    "model": "VW CARAVELLE ( 8+1 LOCURI)",
+    "prices": {
+      "1-3": {"eur": 95, "ron": 482},
+      "4-7": {"eur": 90, "ron": 456},
+      "8-14": {"eur": 85, "ron": 431},
+      "15-30": {"eur": 75, "ron": 380}
+    },
+    "garantie_eur": 400,
+    "asigurare_premium": {"eur": 20, "depozit": 100},
+    "asigurare_integrala": {"eur": 28, "depozit": 0}
+  },
+  {
+    "model": "SEAT ALHAMBRA 7 LOCURI  AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 55, "ron": 279},
+      "4-7": {"eur": 51, "ron": 259},
+      "8-14": {"eur": 48, "ron": 244},
+      "15-30": {"eur": 45, "ron": 228}
+    },
+    "garantie_eur": 200,
+    "asigurare_premium": {"eur": 9, "depozit": 100},
+    "asigurare_integrala": null
+  },
+  {
+    "model": "SEAT ALHAMBRA MANUAL 7 LOCURI",
+    "prices": {
+      "1-3": {"eur": 50, "ron": 254},
+      "4-7": {"eur": 46, "ron": 233},
+      "8-14": {"eur": 43, "ron": 218},
+      "15-30": {"eur": 40, "ron": 203}
+    },
+    "garantie_eur": 200,
+    "asigurare_premium": {"eur": 9, "depozit": 100},
+    "asigurare_integrala": null
+  },
+  {
+    "model": "MERCEDES GLE AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 110, "ron": 558},
+      "4-7": {"eur": 105, "ron": 533},
+      "8-14": {"eur": 100, "ron": 507},
+      "15-30": {"eur": 85, "ron": 431}
+    },
+    "garantie_eur": 400,
+    "asigurare_premium": {"eur": 17, "depozit": 100},
+    "asigurare_integrala": {"eur": 24, "depozit": 0}
+  },
+  {
+    "model": "VW TOUAREG AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 90, "ron": 456},
+      "4-7": {"eur": 83, "ron": 420},
+      "8-14": {"eur": 77, "ron": 390},
+      "15-30": {"eur": 70, "ron": 355}
+    },
+    "garantie_eur": 400,
+    "asigurare_premium": {"eur": 15, "depozit": 100},
+    "asigurare_integrala": {"eur": 22, "depozit": 0}
+  },
+  {
+    "model": "AUDI A6 AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 70, "ron": 355},
+      "4-7": {"eur": 67, "ron": 340},
+      "8-14": {"eur": 63, "ron": 320},
+      "15-30": {"eur": 55, "ron": 279}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 13, "depozit": 100},
+    "asigurare_integrala": null
+  },
+  {
+    "model": "BMW SERIA 5 COMBI AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 80, "ron": 406},
+      "4-7": {"eur": 74, "ron": 375},
+      "8-14": {"eur": 66, "ron": 335},
+      "15-30": {"eur": 60, "ron": 304}
+    },
+    "garantie_eur": 300,
+    "asigurare_premium": {"eur": 13, "depozit": 100},
+    "asigurare_integrala": {"eur": 20, "depozit": 0}
+  }
+] 
