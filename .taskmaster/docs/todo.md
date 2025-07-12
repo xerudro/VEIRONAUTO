@@ -5,7 +5,7 @@
 | 1 | Extrage date și tarife din Excel | Dev | Completed |
 | 2 | Proiectează schema DB compatibilă MariaDB/Postgres | Dev | Pending |
 | 3 | Setează structura proiectului (HTML/CSS/JS, assets) | Dev | Completed |
-| 4 | Implementează switcher limbă și monedă | Dev | Pending |
+| 4 | Implementează switcher limbă și monedă | Dev | Completed |
 | 5 | Layout responsive cu Bootstrap (sau alt framework) | Dev | Completed |
 | 6 | Catalog auto cu 4 carduri/rând, design minimalist | Dev | Completed |
 | 7 | Integrează Swiper.js pentru galerii auto | Dev | Completed |

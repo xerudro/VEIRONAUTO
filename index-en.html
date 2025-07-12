@@ -18,17 +18,21 @@
 <body id="top">
     <!-- HEADER & NAVIGATION -->
     <header class="header">
-        <!-- Main navigation bar with logo and menu links -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-            <div class="nav-container">
-                <!-- Navigation Menu Links -->
-                <ul class="nav-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm container-fluid d-flex align-items-center" aria-label="Main navigation">
+            <!-- Logo la stânga -->
+            <a href="#home" class="navbar-brand d-flex align-items-center" style="padding:0; margin-left:0;">
+                <img src="/assets/images/logo2.svg" alt="Veiron Auto Logo - Inchirieri masini Satu Mare" width="140" height="100" style="object-fit:contain; margin-left:0; padding-left:0;" loading="lazy">
+            </a>
+            <!-- Meniu de navigare centrat -->
+            <div class="flex-grow-1 d-flex justify-content-center">
+                <ul class="nav-menu d-flex justify-content-center mx-auto">
                     <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
                     <li class="nav-item"><a href="#booking" class="nav-link">BOOKING</a></li>
                     <li class="nav-item"><a href="#services" class="nav-link">SERVICES</a></li>
                     <li class="nav-item"><a href="#fleet" class="nav-link">FLEET</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
                 </ul>
+            </div>
                 <!-- Language Switcher Buttons -->
                 <div class="lang-switcher">
                     <!-- Romanian Button -->
@@ -51,6 +55,9 @@
             </div>
         </nav>
     </header>
+    <main id="main-content" tabindex="-1">
+    <!-- Visually hidden h1 for SEO -->
+    <h1 class="visually-hidden">Veiron Auto - Simple & Fast | Car Rentals</h1>
     <!-- HERO SECTION: Fleet Showcase with Swiper Slider -->
     <section class="hero-section" id="home">
         <div class="fleet-showcase">
@@ -314,12 +321,12 @@
         <div class="container">
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">Complete car rental services</p>
-            <div class="services-grid">
+            <div class="row">
                 <!-- Each .service-card is a service offered (e.g., Airport Transfer, Insurance, etc.) -->
                 <!-- Service Card 1 - Car Rentals -->
-                <div class="service-card">
+                <article class="col-md-4 mb-4 service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Rentals" class="service-img">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Rentals" class="service-img" loading="lazy">
                         <div class="service-overlay">
                             <i class="fas fa-car service-icon"></i>
                         </div>
@@ -328,11 +335,11 @@
                         <h3 class="service-title">Car Rentals</h3>
                         <p class="service-description">We offer complete car rental services with free delivery and 24/7 availability nationwide.</p>
                     </div>
-                </div>
+                </article>
                 <!-- Service Card 2 - Expert Consulting -->
-                <div class="service-card">
+                <article class="col-md-4 mb-4 service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Expert Consulting" class="service-img">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Expert Consulting" class="service-img" loading="lazy">
                         <div class="service-overlay">
                             <i class="fas fa-clipboard-list service-icon"></i>
                         </div>
@@ -341,11 +348,11 @@
                         <h3 class="service-title">Expert Consulting</h3>
                         <p class="service-description">We advise and guide you in purchasing a high-quality and safe car.</p>
                     </div>
-                </div>
+                </article>
                 <!-- Service Card 3 - Document Intermediation -->
-                <div class="service-card">
+                <article class="col-md-4 mb-4 service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Document Intermediation" class="service-img">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Document Intermediation" class="service-img" loading="lazy">
                         <div class="service-overlay">
                             <i class="fas fa-file-contract service-icon"></i>
                         </div>
@@ -354,11 +361,11 @@
                         <h3 class="service-title">Document Intermediation</h3>
                         <p class="service-description">We handle registrations, draft car contracts, and RCA/CASCO insurance for your car.</p>
                     </div>
-                </div>
+                </article>
                 <!-- Service Card 4 - Damage Assessment -->
-                <div class="service-card">
+                <article class="col-md-4 mb-4 service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Damage Assessment" class="service-img">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Damage Assessment" class="service-img" loading="lazy">
                         <div class="service-overlay">
                             <i class="fas fa-clipboard-check service-icon"></i>
                         </div>
@@ -367,11 +374,11 @@
                         <h3 class="service-title">Damage Assessment & Insurer Notification</h3>
                         <p class="service-description">Complete assistance for damage assessment and notifying the insurance company as quickly as possible.</p>
                     </div>
-                </div>
+                </article>
                 <!-- Service Card 5 - Replacement Car -->
-                <div class="service-card">
+                <article class="col-md-4 mb-4 service-card">
                     <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Replacement Car" class="service-img">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Replacement Car" class="service-img" loading="lazy">
                         <div class="service-overlay">
                             <i class="fas fa-exchange-alt service-icon"></i>
                         </div>
@@ -380,7 +387,7 @@
                         <h3 class="service-title">Replacement Car During Service</h3>
                         <p class="service-description">We offer a free replacement car for the entire duration of repairs so your daily schedule is not affected.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -602,6 +609,12 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </div>
+    </main>
+    <footer class="footer bg-light py-4 mt-5">
+      <div class="container text-center">
+        <small>&copy; 2024 Veiron Auto. All rights reserved.</small>
+      </div>
+    </footer>
     <!-- External JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

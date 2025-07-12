@@ -23,35 +23,39 @@
     <!-- HEADER & NAVIGATION -->
     <header class="header">
         <!-- Main navigation bar with logo and menu links -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-            <div class="nav-container">
-                <!-- Navigation Menu Links -->
-                <ul class="nav-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm container-fluid d-flex align-items-center" aria-label="Main navigation">
+            <!-- Logo la stânga -->
+            <a href="#acasa" class="navbar-brand d-flex align-items-center" style="padding:0; margin-left:0;">
+                <img src="/assets/images/logo2.svg" alt="Veiron Auto Logo - Inchirieri masini Satu Mare" width="140" height="100" style="object-fit:contain; margin-left:0; padding-left:0;" loading="lazy">
+            </a>
+            <!-- Meniu de navigare centrat -->
+            <div class="flex-grow-1 d-flex justify-content-center">
+                <ul class="nav-menu d-flex justify-content-center mx-auto">
                     <li class="nav-item"><a href="#acasa" class="nav-link">ACASA</a></li>
                     <li class="nav-item"><a href="#rezervare" class="nav-link">REZERVARE</a></li>
                     <li class="nav-item"><a href="#servicii" class="nav-link">SERVICII</a></li>
                     <li class="nav-item"><a href="#parc-auto" class="nav-link">PARC AUTO</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
                 </ul>
-                <!-- Language Switcher Buttons -->
-                <div class="lang-switcher">
-                    <!-- Romanian Button -->
-                    <button class="lang-btn active" data-lang="ro" id="lang-ro">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDMzQTAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjQ0UxMTI2Ii8+Cjwvc3ZnPgo=" alt="Romanian Flag">
-                        <span data-i18n="romanian">ROMÂNĂ</span>
-                    </button>
-                    <!-- English Button -->
-                    <button class="lang-btn" data-lang="en" id="lang-en" onclick="window.location.href='index-en.html'">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQjIyMjM0Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIyLjMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI0LjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI2LjkiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI5LjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIxMS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeT0iMTMuOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHdpZHRoPSI3LjciIGhlaWdodD0iNy43IiBmaWxsPSIjM0MzQjZFIi8+Cjwvc3ZnPgo=" alt="US Flag">
-                        <span data-i18n="english">ENGLISH</span>
-                    </button>
-                </div>
-                <!-- Mobile Menu Toggle (hamburger) -->
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            </div>
+            <!-- Language Switcher Buttons -->
+            <div class="lang-switcher">
+                <!-- Romanian Button -->
+                <button class="lang-btn active" data-lang="ro" id="lang-ro">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDMzQTAiLz4KPHJlY3QgeT0iNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIGZpbGw9IiNGRkQ3MDAiLz4KPHJlY3QgeT0iMTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI1IiBmaWxsPSIjQ0UxMTI2Ii8+Cjwvc3ZnPgo=" alt="Romanian Flag">
+                    <span data-i18n="romanian">ROMÂNĂ</span>
+                </button>
+                <!-- English Button -->
+                <button class="lang-btn" data-lang="en" id="lang-en" onclick="window.location.href='index-en.html'">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiBmaWxsPSIjQjIyMjM0Ii8+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIyLjMiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI0LjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI2LjkiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSI5LjIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxLjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB5PSIxMS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMS4xNSIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeT0iMTMuOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuMTUiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHdpZHRoPSI3LjciIGhlaWdodD0iNy43IiBmaWxsPSIjM0MzQjZFIi8+Cjwvc3ZnPgo=" alt="US Flag">
+                    <span data-i18n="english">ENGLISH</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Toggle (hamburger) -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
