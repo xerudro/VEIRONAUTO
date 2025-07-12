@@ -111,16 +111,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // --- Selectare la click pe imagine: adaugă .selected pe .car-card ---
   carCards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      if (e.target.classList.contains('car-select-btn')) {
-        if (selectedCard) selectedCard.classList.remove('selected');
-        card.classList.add('selected');
-        selectedCard = card;
-        updateSummaryBar();
-      }
+    const imgContainer = card.querySelector('.car-image-container');
+    if (!imgContainer) return;
+    imgContainer.style.cursor = 'pointer';
+    imgContainer.addEventListener('click', function(e) {
+      // Elimină selectarea de la toate cardurile
+      document.querySelectorAll('.car-card.selected').forEach(el => el.classList.remove('selected'));
+      // Selectează doar pe acesta
+      card.classList.add('selected');
+      selectedCard = card;
+      updateSummaryBar();
     });
   });
+
+  // (CSS: vezi .car-image-container.selected)
 
   function updateAllPrices(lang) {
     carCards.forEach(card => {
