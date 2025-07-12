@@ -1,4 +1,4 @@
-# Veiron Auto - Car Rental Website
+# Veiron Auto - Car Rental Website ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/xerudro/VEIRONAUTO?utm_source=oss&utm_medium=github&utm_campaign=xerudro%2FVEIRONAUTO&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 ## 📋 Project Overview
 
