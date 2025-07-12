@@ -4,9 +4,7 @@
 			"command": "npx",
 			"args": ["-y", "--package=task-master-ai", "task-master-ai"],
 			"env": {
-				"GOOGLE_API_KEY": "AIzaSyC4ifjsXiO1gbH92xfesD7pOI-kioMF7VQ",
-				"XAI_API_KEY": "xai-oHnlH7uo1ej9HehkeQJf2DUiJNHuEjUQZ09E2lPdIksw2geR2HVQcbGmkSpWb1cOuqv32aGw3a9Zx1mp",
-				"OLLAMA_API_KEY": "2591bbf4-8a1f-4b4c-9e52-a9169eadd793"
+			
 			}
 		}
 	}
