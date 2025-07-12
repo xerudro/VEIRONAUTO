@@ -7,9 +7,9 @@ body.reservare-cars-bg {
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
-  max-width: 1400px;
+  max-width: 1900px;
   margin: 0 auto;
-  padding: 2.5rem 1rem 7rem 1rem;
+  padding: 2.5rem 0.5rem 7rem 0.5rem;
 }
 
 .cars-sidebar {
@@ -53,7 +53,7 @@ body.reservare-cars-bg {
 }
 .cars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 .car-card {
@@ -61,17 +61,23 @@ body.reservare-cars-bg {
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
   color: #fff;
-  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  padding: 2.2rem 1.7rem 1.7rem 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: box-shadow 0.2s;
   position: relative;
+  min-width: 340px;
+  min-height: 440px;
+  max-width: 100%;
 }
 .car-card:hover {
   box-shadow: 0 8px 32px 0 rgba(82,196,26,0.18);
 }
 .car-card-header {
+  min-height: 2.4em; /* enough for 1 line, but allows wrap for long titles */
+  display: block;
+  align-items: unset;
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -85,20 +91,22 @@ body.reservare-cars-bg {
 }
 .car-image-container {
   width: 100%;
-  aspect-ratio: 2.5/1;
+  aspect-ratio: 2.2/1;
   background: #23242a;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 140px;
 }
 .car-image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+  max-height: 140px;
 }
 .car-specs {
   display: flex;
@@ -216,15 +224,24 @@ body.reservare-cars-bg {
   background: #3ca10e;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1700px) {
   .cars-page-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 0.5rem 7rem 0.5rem;
+    max-width: 98vw;
   }
-  .cars-sidebar {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
+}
+@media (max-width: 1200px) {
+  .cars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .car-card {
+    min-width: 0;
+    min-height: 340px;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
   }
 }
 @media (max-width: 700px) {
@@ -232,10 +249,9 @@ body.reservare-cars-bg {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
-  .cars-summary-bar {
-    flex-direction: column;
-    gap: 0.7rem;
-    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
-    font-size: 1rem;
+  .car-card {
+    min-width: 0;
+    min-height: 260px;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
   }
 } 
