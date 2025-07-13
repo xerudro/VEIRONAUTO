@@ -16,24 +16,31 @@ function normalize(str) {
     .toLowerCase()
     .normalize('NFD').replace(/\p{Diacritic}/gu, '')
     .replace(/\s+/g, ' ')
+    .replace(/(automat|manual|break|sportback|touring|sedan|combi|wagon|estate|van|4x4|limuzina|limousine|coupe|hatchback|sw|\+\d+|\d\+\d+)/g, '')
     .trim();
 }
 
+// Mapping between UI display names and JSON model names
+const modelMap = {
+  'AUDI A3 SPORTBACK': 'AUDI A3 AUTOMAT',
+  'SKODA OCTAVIA BREAK': 'SKODA OCTAVIA BREAK AUTOMAT',
+  'SKODA OCTAVIA SEDAN': 'SKODA OCTAVIA SEDAN AUTOMAT',
+  'SKODA SCALA': 'SKODA SCALA AUTOMAT',
+  'VW T-CROSS': 'VW T-CROSS AUTOMAT',
+  // Adaugă aici restul dacă ai nevoie
+};
+
 function getCarPrice(model, days) {
   if (!carPricesData.length) return null;
-  const normModel = normalize(model);
-  let car = carPricesData.find(c => normalize(c.model) === normModel);
-  // Fallback: match by first 2 words (brand + model)
-  if (!car) {
-    const first2 = normModel.split(' ').slice(0,2).join(' ');
-    car = carPricesData.find(c => normalize(c.model).startsWith(first2));
-  }
+  // Folosește mapping dacă există, altfel data-model
+  const mappedModel = modelMap[model] || model;
+  let car = carPricesData.find(c => c.model === mappedModel);
   if (!car) return null;
   let interval = '1-3';
   if (days >= 15) interval = '15-30';
   else if (days >= 8) interval = '8-14';
   else if (days >= 4) interval = '4-7';
-  return car.prices[interval]?.ron || null;
+  return car.prices[interval]?.eur || null;
 }
 
 // --- Main logic ---
@@ -44,13 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const rentalDays = getRentalPeriod();
 
     carCards.forEach(card => {
-      let model = card.getAttribute('data-model');
-      if (!model) {
-        model = card.querySelector('.car-card-header')?.textContent.trim();
-        if (!model) {
-          model = card.querySelector('.main-title')?.textContent.trim();
-        }
-      }
+      // Folosește main-title pentru mapping, altfel data-model
+      let model = card.querySelector('.main-title')?.textContent.trim() || card.getAttribute('data-model');
       const price = getCarPrice(model, rentalDays);
       if (price !== null) {
         card.setAttribute('data-price', price);
@@ -101,12 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'en';
   const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 0.20;
 
-  function formatPrice(priceRon, lang) {
+  function formatPrice(price, lang) {
     if (lang === 'en') {
-      const eur = (priceRon * eurRate).toFixed(2);
-      return `${eur} EUR`;
+      return `${price.toFixed(2)} EUR`;
     } else {
-      return `${priceRon.toFixed(2).replace('.', ',')} RON`;
+      // Convert EUR to RON
+      const ron = (price / eurRate).toFixed(2).replace('.', ',');
+      return `${ron} RON`;
     }
   }
 
