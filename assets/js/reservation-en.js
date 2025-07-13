@@ -4,7 +4,11 @@ let carPricesData = [];
 function fetchCarPrices() {
   return fetch('assets/json/cars-and-prices.json')
     .then(res => res.json())
-    .then(data => { carPricesData = data; });
+    .then(data => { carPricesData = data; })
+    .catch(err => {
+      console.error('Failed to load car prices:', err);
+      carPricesData = [];
+    });
 }
 
 function normalize(str) {
@@ -154,6 +158,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Inject mileage text into all .unlimited-km elements
+  function updateMileageText(lang) {
+    const mileageText = lang === 'en' ? '300 km included in the price' : '300 km incluse în preț';
+    document.querySelectorAll('.car-card .unlimited-km').forEach(el => {
+      // Remove all text nodes except the icon
+      Array.from(el.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) el.removeChild(node);
+      });
+      // Add the mileage text
+      el.appendChild(document.createTextNode(' ' + mileageText));
+    });
+  }
+  // Call on load and on language switch
+  updateMileageText(currentLang);
+
   // Add event listeners for language switcher
   const langRoBtn = document.getElementById('lang-ro');
   const langEnBtn = document.getElementById('lang-en');
@@ -162,11 +181,13 @@ document.addEventListener('DOMContentLoaded', function() {
       currentLang = 'ro';
       updateAllPrices('ro');
       updateTexts('ro');
+      updateMileageText('ro');
     });
     langEnBtn.addEventListener('click', function() {
       currentLang = 'en';
       updateAllPrices('en');
       updateTexts('en');
+      updateMileageText('en');
     });
   }
 

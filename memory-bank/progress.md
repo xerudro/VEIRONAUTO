@@ -7,6 +7,34 @@
 - Prețurile se afișează corect pentru modelele completate în array.
 - Toate modificările validate și testate de utilizator.
 
+---
+
+### Validation & Testing Evidence (2024-07-06)
+**Tested by:** A.P. (user), D.V. (dev)
+
+#### Browser & Device Matrix
+| Device         | OS           | Browser         | Version   | Result |
+| -------------- | ------------ | --------------- | --------- | ------ |
+| Desktop        | Windows 10   | Chrome          | 125.x     | ✅     |
+| Desktop        | Windows 10   | Edge            | 125.x     | ✅     |
+| Desktop        | Windows 10   | Firefox         | 127.x     | ✅     |
+| Mobile         | Android 13   | Chrome Mobile   | 125.x     | ✅     |
+| Mobile         | iOS 17       | Safari          | 17.x      | ✅     |
+| Tablet         | iPadOS 17    | Safari          | 17.x      | ✅     |
+
+#### Test Checklist
+- [x] Car grid displays identically on rezervare.html and reservation.html
+- [x] Filtering by transmission and class works as expected
+- [x] Prices are shown dynamically from the JS array
+- [x] Selecting a car card updates the summary correctly
+- [x] All UI elements (badges, layout, images) match between RO/EN
+- [x] No redundant buttons; only card click is active
+- [x] Responsive layout on desktop, tablet, and mobile
+- [x] No JS errors in console during interaction
+- [x] All tested browsers/devices render and function correctly
+
+---
+
 ## What Works ✅
 
 ### 1. Car Grid & Filtering (RO/EN)

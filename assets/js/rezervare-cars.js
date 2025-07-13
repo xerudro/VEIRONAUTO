@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Currency & Language Switch Logic ---
   let currentLang = 'ro';
-  const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 0.20;
+  const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 5.07;
 
   function formatPrice(priceEur, lang) {
     if (lang === 'en') {

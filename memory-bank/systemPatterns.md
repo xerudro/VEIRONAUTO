@@ -199,3 +199,8 @@ development: {
 - Prețurile pe carduri se populează din array-ul global MODELE_MASINI_PRETURI (assets/js/modele-masini-preturi.js), nu din JSON sau API.
 - Selectarea cardului se face la click pe orice card, nu pe buton dedicat.
 - Orice modificare de preț se face direct în array-ul JS, fără deploy backend sau modificare JSON. 
+
+// English translation:
+- The prices on the cards are populated from the global array MODELE_MASINI_PRETURI (assets/js/modele-masini-preturi.js), not from JSON or an API.
+- Card selection is performed by clicking anywhere on the card, not on a dedicated button.
+- Any price modification is done directly in the JS array, without backend deployment or JSON modification. 
