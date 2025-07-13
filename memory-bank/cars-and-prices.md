@@ -1,4 +1,6 @@
-# Tarife Mașini și Asigurări (actualizat 2024)
+# Cars and Prices (2024)
+
+> NOTĂ: Popularea prețurilor pe site se face acum din array-ul MODELE_MASINI_PRETURI din assets/js/modele-masini-preturi.js, nu din acest fișier sau din JSON. Pentru actualizări, editează direct array-ul JS.
 
 | Model | 1-3 zile (EUR) | 1-3 zile (RON) | 4-7 zile (EUR) | 4-7 zile (RON) | 8-14 zile (EUR) | 8-14 zile (RON) | 15-30 zile (EUR) | 15-30 zile (RON) | Garanție (EUR) | Asigurare Premium | Asigurare Integrală |
 |:-------------------------------------|:-------------------|:-------------------|:-------------------|:-------------------|:--------------------|:--------------------|:---------------------|:---------------------|----------------:|:------------------------|:----------------------|

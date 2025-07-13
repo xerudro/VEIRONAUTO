@@ -32,7 +32,7 @@ function getCarPrice(model, days) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchCarPrices().then(() => {
     const carCards = Array.from(document.querySelectorAll('.car-card'));
-    const rentalDays = 1; // Poți adăuga logica de calcul zile dacă vrei
+    const rentalDays = getRentalPeriod();
     carCards.forEach(card => {
       let model = card.getAttribute('data-model');
       if (!model) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (price !== null) {
         card.setAttribute('data-price', price);
         const priceElem = card.querySelector('.price-per-day');
-        if (priceElem) priceElem.textContent = price.toFixed(2).replace('.', ',') + ' RON /zi';
+        if (priceElem) priceElem.textContent = formatPrice(price, currentLang) + (currentLang === 'en' ? ' /day' : ' /zi');
       } else {
         card.setAttribute('data-price', 0);
         const priceElem = card.querySelector('.price-per-day');
@@ -92,12 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'ro';
   const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 0.20;
 
-  function formatPrice(priceRon, lang) {
+  function formatPrice(priceEur, lang) {
     if (lang === 'en') {
-      const eur = (priceRon * eurRate).toFixed(2);
-      return `${eur} EUR`;
+      return `${priceEur.toFixed(2)} EUR`;
     } else {
-      return `${priceRon.toFixed(2).replace('.', ',')} RON`;
+      const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 5.07; // fallback to 5.07 if not set
+      const ron = (priceEur * eurRate).toFixed(2).replace('.', ',');
+      return `${ron} RON`;
     }
   }
 
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateAllPrices(lang) {
     carCards.forEach(card => {
       const basePrice = parseFloat(card.getAttribute('data-price'));
-      const priceElem = card.querySelector('.car-pricing');
+      const priceElem = card.querySelector('.price-per-day');
       if (priceElem) {
         priceElem.textContent = formatPrice(basePrice, lang) + (lang === 'en' ? ' /day' : ' /zi');
       }

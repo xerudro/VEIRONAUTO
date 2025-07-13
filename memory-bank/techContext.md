@@ -180,3 +180,10 @@ Currently no build process required, but could add:
 - **RTL Support** - Right-to-left languages
 - **Currency Handling** - Multiple currencies
 - **Date/Time Formatting** - Localized formats 
+
+## Actualizare 2024-07-06
+- Popularea prețurilor pe carduri se face din array JS global (modele-masini-preturi.js), nu din JSON sau API.
+- Nu se mai folosește fetch sau AJAX pentru prețuri.
+- UX și grila de carduri sincronizate între rezervare.html și reservation.html.
+- Selectarea cardului se face la click pe orice card, sumarul se actualizează corect.
+- Toate modificările validate și testate de utilizator. 

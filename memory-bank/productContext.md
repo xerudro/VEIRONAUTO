@@ -88,3 +88,9 @@ Veiron Auto provides a **modern, digital-first car rental experience** that:
 - **Digital-first approach** - Modern booking experience
 - **Flexible options** - Multiple locations and time slots
 - **Professional service** - Quality vehicles and support 
+
+## Progres 2024-07-06
+- Grila de carduri și filtrul din rezervare.html sunt 1:1 cu reservation.html (structură, layout, badge-uri, UX identic).
+- Prețurile se populează direct din array JS global (modele-masini-preturi.js), editabil rapid.
+- Selectarea mașinii se face la click pe orice card, sumarul se actualizează corect.
+- Toate modificările validate și testate de utilizator. 

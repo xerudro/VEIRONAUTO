@@ -1,25 +1,29 @@
-# Active Development Context: [2024-07-02]
+# Active Development Context: [2024-07-06]
 
 ## Current Task Focus
 
-- Sincronizare completă a taskurilor și progresului cu noile documente: prd.md, UXdesign.md, todo.md și memory-bank.
-- Toate task-urile din todo.md reflectă progresul real, iar orice planificare viitoare va ține cont de acest context unificat.
-- Pauză de lucru: urmează o perioadă de inactivitate (noapte).
+- Sincronizare completă a cardurilor și filtrului între rezervare.html și reservation.html (structură, layout, badge-uri, UX identic).
+- Integrare populare prețuri direct din array JS (modele-masini-preturi.js), fără fetch sau JSON extern.
+- Selectarea mașinii funcționează la click pe orice card, sumarul se actualizează corect.
+- Prețurile se afișează corect pentru modelele completate în array.
+- Toate modificările validate și testate de utilizator.
 
 ## Recent Decisions / Changes
 
-- [2024-07-02]: S-a realizat update complet la todo.md pe baza progresului real și a contextului din memory-bank.
-- [2024-07-02]: Toate documentele de cerințe, UX și taskuri sunt acum sursa principală pentru orice dezvoltare viitoare.
+- [2024-07-06]: S-a trecut la popularea prețurilor din array JS global, nu din JSON.
+- [2024-07-06]: Selectarea cardului se face la click pe orice card, nu pe buton.
+- [2024-07-06]: Confirmare de la utilizator că totul funcționează corect.
 
 ## Specific Instructions / Constraints for Current Task
 
-- Orice task management, progres sau planificare va fi aliniat cu prd.md, UXdesign.md, todo.md și memory-bank.
-- Următorul pas: reluarea lucrului după pauză (somn).
+- Orice completare de prețuri se face direct în array-ul JS.
+- Următorul pas: completare prețuri pentru toate modelele și eventuală integrare backend.
 
 ## Known Issues / Blockers
 
-- Niciunul identificat la acest pas.
+- Prețurile lipsesc pentru unele modele (de completat în array).
 
 ## Next Steps (AI/Developer Focus)
 
-- La revenire: continuă cu taskurile rămase din todo.md și planifică următorii pași pe baza contextului actualizat. 
+- Completează prețurile pentru toate modelele în array JS.
+- Planifică integrarea cu backend sau persistarea prețurilor dacă este nevoie. 

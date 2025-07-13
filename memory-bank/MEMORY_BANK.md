@@ -14,6 +14,7 @@
 - ✅ **Functional**: Booking form with different dropoff location feature
 - ✅ **Working**: Server running on http://localhost:8000
 - ✅ **Complete**: All original cities restored and functional
+- ✅ **Carduri și prețuri sincronizate**: Grilă și UX identic pe ambele pagini, prețuri editabile rapid din array JS, validare completă.
 
 ## Key Features Implemented
 
@@ -90,6 +91,7 @@ VEIRONAUTO/
 2. **Dynamic Dropoff**: Implemented checkbox functionality for different return location
 3. **Config Integration**: Centralized location management in config.js
 4. **Documentation**: Created comprehensive feature documentation
+5. **[2024-07-06] Carduri și prețuri sincronizate**: Grila de carduri și filtrul din rezervare.html sunt 1:1 cu reservation.html, prețurile se populează direct din array JS global, selectarea cardului se face la click, totul validat cu utilizatorul.
 
 ## Issues Resolved
 - ✅ **City List Error**: Initially replaced original cities with wrong ones, now fixed

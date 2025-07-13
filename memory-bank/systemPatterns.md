@@ -194,3 +194,8 @@ development: {
 - Works on all screen sizes
 - Mobile-first approach
 - Progressive enhancement 
+
+## Pattern actual populare prețuri (2024-07-06)
+- Prețurile pe carduri se populează din array-ul global MODELE_MASINI_PRETURI (assets/js/modele-masini-preturi.js), nu din JSON sau API.
+- Selectarea cardului se face la click pe orice card, nu pe buton dedicat.
+- Orice modificare de preț se face direct în array-ul JS, fără deploy backend sau modificare JSON. 
