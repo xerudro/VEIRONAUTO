@@ -269,7 +269,21 @@ This project is proprietary software for Veiron Auto. All rights reserved.
 
 ---
 
-### Exemplu de comentariu pentru cod (JS):
+### Currency Handling
+
+- **Base currency:** All prices in the system are stored and processed in EUR.
+- **Display:**
+  - For Romanian users, prices are shown in RON (converted at display time using `eurRate` from config).
+  - For English users, prices are shown in EUR.
+- **Conversion formula:**
+  - RON = EUR * (1/eurRate)
+  - (ex: if eurRate = 0.20, then 1 EUR = 5 RON)
+- **Data storage:**
+  - All reservation data is saved with the price in EUR, not RON.
+- **Important:**
+  - Any future changes to currency logic must respect this convention for consistency.
+
+#### Example code comment for JS files:
 
 ```js
 /*
@@ -277,29 +291,10 @@ This project is proprietary software for Veiron Auto. All rights reserved.
  * - All base prices are stored in EUR.
  * - For Romanian language (RO), prices are displayed in RON, converted using eurRate from config.
  * - For English language (EN), prices are displayed in EUR (no conversion).
- * - Conversion formula: RON = EUR / eurRate
- * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 RON = 0.20 EUR, so 1 EUR = 5 RON)
+ * - Conversion formula: RON = EUR * (1/eurRate)
+ * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 EUR = 5 RON)
  * - When saving reservations, always store the price in EUR.
  */
-```
-
-### Exemplu de secțiune pentru README.md:
-
-```markdown
-<code_block_to_apply_from>
-## Currency Handling
-
-- **Base currency:** All prices in the system are stored and processed in EUR.
-- **Display:**
-  - For Romanian users, prices are shown in RON (converted at display time using `eurRate` from config).
-  - For English users, prices are shown in EUR.
-- **Conversion formula:**  
-  - RON = EUR / eurRate  
-  - (ex: if eurRate = 0.20, then 1 EUR = 5 RON)
-- **Data storage:**  
-  - All reservation data is saved with the price in EUR, not RON.
-- **Important:**  
-  - Any future changes to currency logic must respect this convention for consistency.
 ```
 
 ---

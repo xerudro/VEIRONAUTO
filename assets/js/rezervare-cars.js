@@ -25,7 +25,8 @@ function getCarPrice(model, days) {
   if (days >= 15) interval = '15-30';
   else if (days >= 8) interval = '8-14';
   else if (days >= 4) interval = '4-7';
-  return car.prices[interval]?.ron || null;
+  // Return EUR, not RON
+  return car.prices[interval]?.eur || null;
 }
 
 // --- Main logic ---
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       const price = getCarPrice(model, rentalDays);
       if (price !== null) {
-        card.setAttribute('data-price', price);
+        card.setAttribute('data-price', price); // price in EUR
         const priceElem = card.querySelector('.price-per-day');
         if (priceElem) priceElem.textContent = formatPrice(price, currentLang) + (currentLang === 'en' ? ' /day' : ' /zi');
       } else {
@@ -90,23 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Currency & Language Switch Logic ---
   let currentLang = 'ro';
-  const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 5.07;
+  // --- FIX: Use consistent eurRate = 0.20 everywhere ---
+  const eurRate = 0.20; // 1 RON = 0.20 EUR, so 1 EUR = 5 RON
 
+  // --- Currency Conversion Policy ---
   /*
    * Currency Conversion Policy:
    * - All base prices are stored in EUR.
    * - For Romanian language (RO), prices are displayed in RON, converted using eurRate from config.
    * - For English language (EN), prices are displayed in EUR (no conversion).
-   * - Conversion formula: RON = EUR / eurRate
-   * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 RON = 0.20 EUR, so 1 EUR = 5 RON)
+   * - Conversion formula: RON = EUR * (1/eurRate)
+   * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 EUR = 5 RON)
    * - When saving reservations, always store the price in EUR.
    */
   function formatPrice(priceEur, lang) {
     if (lang === 'en') {
       return `${priceEur.toFixed(2)} EUR`;
     } else {
-      const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 5.07; // fallback to 5.07 if not set
-      const ron = (priceEur * eurRate).toFixed(2).replace('.', ',');
+      // RON = EUR * (1/eurRate)
+      const ron = (priceEur * (1/eurRate)).toFixed(2).replace('.', ',');
       return `${ron} RON`;
     }
   }
