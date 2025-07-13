@@ -1,3 +1,156 @@
+
+:root {
+    --car-card-bg: #2d3439;
+    --car-card-text-primary: #ffffff;
+    --car-card-text-secondary: #adb5bd;
+    --car-card-accent: #44cc77;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+/* --- CUSTOM CAR CARD (first card) --- */
+.car-card-custom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: #18191c;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  padding: 2.2rem 1.7rem 1.7rem 1.7rem;
+  min-width: 340px;
+  max-width: 100%;
+  min-height: 480px;
+ 
+  
+  overflow: visible;
+}
+.car-card-header-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+.car-card-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.car-card-custom .main-title {
+  color: #fff;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-right: 0.4rem;
+}
+.car-card-custom .similar-text {
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 400;
+  margin-left: 0.2rem;
+}
+.car-card-custom .car-card-subtitle {
+  font-size: 0.98rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 0.1rem;
+}
+.car-card-custom .car-card-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+.car-card-custom .badge {
+  background: #f5f5f5;
+  color: #444;
+  font-size: 0.92rem;
+  border-radius: 8px;
+  padding: 0.18em 0.7em 0.18em 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: 500;
+}
+.car-card-image-zone {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  margin: 0 0 -0.5rem 0;
+}
+.car-card-custom .car-card-image {
+  max-width: none;
+  width: 150%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+.car-card-footer-zone {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  width: calc(100% - 2.4rem);
+  z-index: 2;
+}
+.unlimited-km {
+  font-size: 0.92rem;
+  color: #52c41a;
+  font-weight: 500;
+  margin-bottom: 0.18rem;
+  line-height: 1.2;
+}
+.unlimited-km .km-highlight {
+  display: block;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #44cc77;
+  margin-top: 0.1em;
+  letter-spacing: 0.01em;
+}
+.car-card-pricing-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.04rem;
+  color: #222;
+  font-weight: 500;
+}
+.price-per-day {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+}
+.price-total,
+.price-total-total {
+  color: #fff;
+  font-size: 1.04rem;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .car-card-custom {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  }
+  .car-card-footer-zone {
+    left: 0.7rem;
+    bottom: 0.7rem;
+    width: calc(100% - 1.4rem);
+  }
+}
+
 body.reservare-cars-bg {
   background: #fff;
   min-height: 100vh;

@@ -14,10 +14,10 @@ const VeironConfig = {
         
         // Contact Information
         contact: {
-            email: 'contact@veironauto.ro',
-            phone: '+40123456789',
-            whatsapp: '+40123456789',
-            address: 'Strada Exemplu Nr. 123, Bucuresti, Romania'
+            email: 'veironauto@gmail.com',
+            phone: '+40755622858',
+            whatsapp: '+40755622858',
+            address: 'B-dul Traian nr.12, Satu Mare, Romania'
         },
         
         // Business Hours

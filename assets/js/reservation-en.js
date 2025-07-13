@@ -36,16 +36,25 @@ function getCarPrice(model, days) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchCarPrices().then(() => {
     // Update all car cards with correct price
+    const carCards = Array.from(document.querySelectorAll('.car-card'));
+    const rentalDays = getRentalPeriod();
+
     carCards.forEach(card => {
-      const model = card.querySelector('.car-card-header')?.textContent.trim();
+      let model = card.getAttribute('data-model');
+      if (!model) {
+        model = card.querySelector('.car-card-header')?.textContent.trim();
+        if (!model) {
+          model = card.querySelector('.main-title')?.textContent.trim();
+        }
+      }
       const price = getCarPrice(model, rentalDays);
       if (price !== null) {
         card.setAttribute('data-price', price);
-        const priceElem = card.querySelector('.car-pricing');
+        const priceElem = card.querySelector('.car-pricing, .price-per-day');
         if (priceElem) priceElem.textContent = formatPrice(price, currentLang) + (currentLang === 'en' ? ' /day' : ' /zi');
       } else {
         card.setAttribute('data-price', 0);
-        const priceElem = card.querySelector('.car-pricing');
+        const priceElem = card.querySelector('.car-pricing, .price-per-day');
         if (priceElem) priceElem.textContent = 'N/A';
       }
     });
@@ -70,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const classInputs = document.querySelectorAll('.cars-sidebar input[type="checkbox"]');
 
   function filterCars() {
-    const selectedTransmission = Array.from(transmissionInputs).find(i => i.checked)?.nextSibling.textContent.trim().toLowerCase();
-    const selectedClasses = Array.from(classInputs).filter(i => i.checked).map(i => i.nextSibling.textContent.trim().toLowerCase());
+    const selectedTransmission = Array.from(transmissionInputs).find(i => i.checked)?.value;
+    const selectedClasses = Array.from(classInputs).filter(i => i.checked).map(i => i.value);
     carCards.forEach(card => {
       const transmission = card.getAttribute('data-transmission');
       const carClass = card.getAttribute('data-class');
@@ -111,22 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // --- Selectare la click pe imagine: adaugă .selected pe .car-card ---
+  // --- Car selection on card click: add .selected to .car-card ---
   carCards.forEach(card => {
-    const imgContainer = card.querySelector('.car-image-container');
-    if (!imgContainer) return;
-    imgContainer.style.cursor = 'pointer';
-    imgContainer.addEventListener('click', function(e) {
-      // Elimină selectarea de la toate cardurile
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function(e) {
       document.querySelectorAll('.car-card.selected').forEach(el => el.classList.remove('selected'));
-      // Selectează doar pe acesta
       card.classList.add('selected');
       selectedCard = card;
       updateSummaryBar();
     });
   });
-
-  // (CSS: vezi .car-image-container.selected)
+  // (CSS: see .car-card.selected)
 
   function updateAllPrices(lang) {
     carCards.forEach(card => {

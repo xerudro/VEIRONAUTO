@@ -1,25 +1,21 @@
-// --- Load car prices from JSON ---
-let carPricesData = [];
+// --- Load car prices from local array ---
+// import { MODELE_MASINI_PRETURI } from './modele-masini-preturi.js';
+
+let carPricesData = window.MODELE_MASINI_PRETURI || [];
 
 function fetchCarPrices() {
-  return fetch('assets/json/cars-and-prices.json')
-    .then(res => res.json())
-    .then(data => { carPricesData = data; });
+  // Nu mai fac fetch, doar returnez Promise.resolve()
+  return Promise.resolve();
 }
 
 function normalize(str) {
-  return str
-    .toLowerCase()
-    .normalize('NFD').replace(/\p{Diacritic}/gu, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return str?.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
 function getCarPrice(model, days) {
   if (!carPricesData.length) return null;
   const normModel = normalize(model);
   let car = carPricesData.find(c => normalize(c.model) === normModel);
-  // Fallback: match by first 2 words (brand + model)
   if (!car) {
     const first2 = normModel.split(' ').slice(0,2).join(' ');
     car = carPricesData.find(c => normalize(c.model).startsWith(first2));
@@ -35,17 +31,21 @@ function getCarPrice(model, days) {
 // --- Main logic ---
 document.addEventListener('DOMContentLoaded', function() {
   fetchCarPrices().then(() => {
-    // Update all car cards with correct price
+    const carCards = Array.from(document.querySelectorAll('.car-card'));
+    const rentalDays = 1; // Poți adăuga logica de calcul zile dacă vrei
     carCards.forEach(card => {
-      const model = card.querySelector('.car-card-header')?.textContent.trim();
+      let model = card.getAttribute('data-model');
+      if (!model) {
+        model = card.querySelector('.main-title')?.textContent.trim();
+      }
       const price = getCarPrice(model, rentalDays);
       if (price !== null) {
         card.setAttribute('data-price', price);
-        const priceElem = card.querySelector('.car-pricing');
-        if (priceElem) priceElem.textContent = formatPrice(price, currentLang) + (currentLang === 'en' ? ' /day' : ' /zi');
+        const priceElem = card.querySelector('.price-per-day');
+        if (priceElem) priceElem.textContent = price.toFixed(2).replace('.', ',') + ' RON /zi';
       } else {
         card.setAttribute('data-price', 0);
-        const priceElem = card.querySelector('.car-pricing');
+        const priceElem = card.querySelector('.price-per-day');
         if (priceElem) priceElem.textContent = 'N/A';
       }
     });
@@ -69,20 +69,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const transmissionInputs = document.querySelectorAll('.cars-sidebar input[name="transmission"]');
   const classInputs = document.querySelectorAll('.cars-sidebar input[type="checkbox"]');
 
-  function filterCars() {
-    const selectedTransmission = Array.from(transmissionInputs).find(i => i.checked)?.nextSibling.textContent.trim().toLowerCase();
-    const selectedClasses = Array.from(classInputs).filter(i => i.checked).map(i => i.nextSibling.textContent.trim().toLowerCase());
+  function filtreazaMasini() {
+    const transmisieSelectata = Array.from(transmissionInputs).find(i => i.checked)?.value;
+    const claseSelectate = Array.from(classInputs).filter(i => i.checked).map(i => i.value);
     carCards.forEach(card => {
-      const transmission = card.getAttribute('data-transmission');
-      const carClass = card.getAttribute('data-class');
-      let show = true;
-      if (selectedTransmission && transmission !== selectedTransmission) show = false;
-      if (selectedClasses.length && !selectedClasses.includes(carClass)) show = false;
-      card.style.display = show ? '' : 'none';
+      const transmisie = card.getAttribute('data-transmission');
+      const clasa = card.getAttribute('data-class');
+      let afiseaza = true;
+      if (transmisieSelectata && transmisie !== transmisieSelectata) afiseaza = false;
+      if (claseSelectate.length && !claseSelectate.includes(clasa)) afiseaza = false;
+      card.style.display = afiseaza ? '' : 'none';
     });
+    // Debug log
+    console.log('Filtru transmisie:', transmisieSelectata, 'Filtru clase:', claseSelectate);
+    console.log('Carduri afișate:', carCards.filter(c => c.style.display !== 'none').map(c => c.getAttribute('data-model')));
   }
-  transmissionInputs.forEach(i => i.addEventListener('change', filterCars));
-  classInputs.forEach(i => i.addEventListener('change', filterCars));
+
+  transmissionInputs.forEach(i => i.addEventListener('change', filtreazaMasini));
+  classInputs.forEach(i => i.addEventListener('change', filtreazaMasini));
 
   // --- Currency & Language Switch Logic ---
   let currentLang = 'ro';

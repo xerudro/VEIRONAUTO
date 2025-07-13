@@ -226,5 +226,17 @@
     "garantie_eur": 300,
     "asigurare_premium": {"eur": 13, "depozit": 100},
     "asigurare_integrala": {"eur": 20, "depozit": 0}
+  },
+  {
+    "model": "AUDI A3 AUTOMAT",
+    "prices": {
+      "1-3": {"eur": 40, "ron": 203},
+      "4-7": {"eur": 37, "ron": 188},
+      "8-14": {"eur": 34, "ron": 172},
+      "15-30": {"eur": 33, "ron": 167}
+    },
+    "garantie_eur": 200,
+    "asigurare_premium": {"eur": 9, "depozit": 100},
+    "asigurare_integrala": null
   }
 ] 

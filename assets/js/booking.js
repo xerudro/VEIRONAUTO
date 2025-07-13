@@ -9,7 +9,9 @@
 class BookingForm {
     constructor() {
         this.form = document.getElementById('bookingForm');
-        this.init();
+        if (this.form) {
+            this.init();
+        }
     }
 
     /**
@@ -32,12 +34,14 @@ class BookingForm {
         tomorrow.setDate(tomorrow.getDate() + 1);
 
         // Set minimum dates
-        document.getElementById('pickupDate').min = today;
-        document.getElementById('dropoffDate').min = today;
-
-        // Set default values
-        document.getElementById('pickupDate').value = today;
-        document.getElementById('dropoffDate').value = tomorrow.toISOString().split('T')[0];
+        const pickupDateInput = document.getElementById('pickupDate');
+        const dropoffDateInput = document.getElementById('dropoffDate');
+        if (pickupDateInput && dropoffDateInput) {
+            pickupDateInput.min = today;
+            dropoffDateInput.min = today;
+            pickupDateInput.value = today;
+            dropoffDateInput.value = tomorrow.toISOString().split('T')[0];
+        }
     }
 
     /**

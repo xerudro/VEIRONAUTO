@@ -79,116 +79,517 @@
     <div class="cars-page-container">
         <!-- SIDEBAR FILTERS -->
         <aside class="cars-sidebar">
-            <h3 data-i18n="choose_car">Alege masina</h3>
+            <h3>Alege mașina</h3>
             <div class="filter-group">
-                <div style="font-weight:600;margin-bottom:0.5rem;" data-i18n="transmission">Cutie Viteze</div>
-                <label><input type="radio" name="transmission"> <span data-i18n="automatic">Automatica</span></label>
-                <label><input type="radio" name="transmission"> <span data-i18n="manual">Manuala</span></label>
+                <div style="font-weight:600;margin-bottom:0.5rem;">Transmisie</div>
+                <label><input type="radio" name="transmission" value="automatic"> <span>Automată</span></label>
+                <label><input type="radio" name="transmission" value="manual"> <span>Manuală</span></label>
             </div>
             <div class="filter-group">
-                <div style="font-weight:600;margin-bottom:0.5rem;" data-i18n="class">Clasa</div>
-                <label><input type="checkbox"> <span data-i18n="electric">Electrica</span></label>
-                <label><input type="checkbox"> <span data-i18n="small">Mica</span></label>
-                <label><input type="checkbox"> <span data-i18n="economy">Economy</span></label>
-                <label><input type="checkbox"> <span data-i18n="compact">Compacta</span></label>
-                <label><input type="checkbox"> <span data-i18n="standard">Standard</span></label>
-                <label><input type="checkbox"> <span data-i18n="full_size">Full Size</span></label>
-                <label><input type="checkbox"> <span data-i18n="suv">SUV</span></label>
-                <label><input type="checkbox"> <span data-i18n="mini_van">Mini Van</span></label>
-                <label><input type="checkbox"> <span data-i18n="premium">Premium</span></label>
-                <label><input type="checkbox"> <span data-i18n="van">VAN</span></label>
-                <label><input type="checkbox"> <span data-i18n="pickup">Pickup</span></label>
+                <div style="font-weight:600;margin-bottom:0.5rem;">Clasă</div>
+                <label><input type="checkbox" value="electric"> <span>Electrică</span></label>
+                <label><input type="checkbox" value="small"> <span>Mică</span></label>
+                <label><input type="checkbox" value="economy"> <span>Economică</span></label>
+                <label><input type="checkbox" value="compact"> <span>Compactă</span></label>
+                <label><input type="checkbox" value="standard"> <span>Standard</span></label>
+                <label><input type="checkbox" value="full_size"> <span>Mare</span></label>
+                <label><input type="checkbox" value="suv"> <span>SUV</span></label>
+                <label><input type="checkbox" value="mini"> <span>Mini</span></label>
+                <label><input type="checkbox" value="premium"> <span>Premium</span></label>
+                <label><input type="checkbox" value="van"> <span>Van</span></label>
+                <label><input type="checkbox" value="pickup"> <span>Pickup</span></label>
+                <label><input type="checkbox" value="sedan"> <span>Sedan</span></label>
+                <label><input type="checkbox" value="break"> <span>Break/Estate</span></label>
             </div>
         </aside>
         <!-- CAR GRID: List of available cars -->
         <main class="cars-main">
             <div class="cars-grid">
-                <!-- Each .car-card is a car option -->
-                <div class="car-card" data-transmission="manual" data-class="small" data-price="149.33">
-                    <div class="car-card-header">MITSUBISHI SPACE STAR <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Mini Sedan Manual</div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mitsubishi Space Star">
+                <!-- Carduri 1:1 cu reservation.html, dar cu text în română și prețul lăsat gol pentru populare dinamică -->
+                <div class="car-card car-card-custom car-type-compact" data-model="AUDI A3 SPORTBACK" data-transmission="manual" data-class="compact">
+                    <div class="car-card-header-zone">
+                        <div class="car-card-title-row">
+                            <span class="main-title" contenteditable="true">AUDI A3 SPORTBACK</span>
+                            <span class="similar-text" contenteditable="true">sau similar</span>
+                        </div>
+                        <div class="car-card-subtitle" contenteditable="true">Compact Sedan Manuală</div>
+                        <div class="car-card-badges">
+                            <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 4</span>
+                            <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                            <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                        </div>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>2</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Manual</div>
+                    <div class="car-card-image-zone">
+                        <img src="/assets/images/Audi-a3-sportback-white.svg" alt="Audi A3 Sportback" class="car-card-image">
                     </div>
-                    <div class="car-pricing">149,33 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                    <div class="car-card-footer-zone">
+                        <div class="unlimited-km" contenteditable="true">
+                            <i class="fas fa-check"></i>
+                            300 KM incluși în preț<br>
+                        </div>
+                        <div class="car-card-pricing-row">
+                            <span class="price-per-day" contenteditable="true"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="car-card" data-transmission="manual" data-class="economy" data-price="168.81">
-                    <div class="car-card-header">RENAULT CLIO <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Economy Sedan Manual</div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Renault Clio">
+                <!-- SKODA OCTAVIA BREAK AUTOMAT -->
+                <div class="car-card car-card-custom car-type-break" data-model="SKODA OCTAVIA BREAK AUTOMAT" data-transmission="automatic" data-class="break">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">SKODA OCTAVIA BREAK</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>2</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Manual</div>
+                    <div class="car-card-subtitle" contenteditable="true">Break Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
                     </div>
-                    <div class="car-pricing">168,81 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="SKODA OCTAVIA BREAK" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
                 </div>
-                <div class="car-card" data-transmission="manual" data-class="small" data-price="175.16">
-                    <div class="car-card-header">DACIA LOGAN <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Mini Sedan Manual</div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dacia Logan">
+                <!-- SKODA OCTAVIA SEDAN AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="SKODA OCTAVIA SEDAN AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">SKODA OCTAVIA SEDAN</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>2</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Manual</div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
                     </div>
-                    <div class="car-pricing">175,16 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="SKODA OCTAVIA SEDAN" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
                 </div>
-                <div class="car-card" data-transmission="manual" data-class="compact" data-price="215.79">
-                    <div class="car-card-header">LUCKY DIP CAR <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Compact Sedan Manual</div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1511918984145-48de785d4c4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lucky Dip Car">
+                <!-- SKODA SCALA AUTOMAT -->
+                <div class="car-card car-card-custom car-type-compact" data-model="SKODA SCALA AUTOMAT" data-transmission="automatic" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">SKODA SCALA</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>2</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Manual</div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Hatchback Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
                     </div>
-                    <div class="car-pricing">215,79 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="SKODA SCALA" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
                 </div>
-                <div class="car-card" data-transmission="manual" data-class="compact" data-price="228.56">
-                    <div class="car-card-header">HYUNDAI I30 <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Compact Sedan Manual </div>
-                    <div style="height:1.8em"></div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hyundai I30">
+                <!-- VW GOLF 7 AUTOMAT -->
+                <div class="car-card car-card-custom car-type-compact" data-model="VW GOLF 7 AUTOMAT" data-transmission="automatic" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">VW GOLF 7</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>3</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Manual</div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
                     </div>
-                    <div class="car-pricing">228,56 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="VW GOLF 7" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
                 </div>
-                <div class="car-card" data-transmission="automat" data-class="compact" data-price="254.85">
-                    <div class="car-card-header">VW GOLF <span class="car-similar">sau asemănător</span></div>
-                    <div class="car-category">Compact Sedan Automat </div>
-                    <div style="height:1.8em"></div>
-                    <div class="car-image-container">
-                        <img src="https://images.unsplash.com/photo-1494976688153-c785a4cb3905?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VW Golf">
+                <!-- VW PASSAT AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="VW PASSAT AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">VW PASSAT</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
                     </div>
-                    <div class="car-specs">
-                        <div class="spec-item"><i class="fas fa-user"></i>5</div>
-                        <div class="spec-item"><i class="fas fa-suitcase"></i>3</div>
-                        <div class="spec-item"><i class="fas fa-cog"></i>Automat</div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
                     </div>
-                    <div class="car-pricing">254,85 lei /zi</div>
-                    <button class="car-select-btn" data-i18n="select">Selectează</button>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="VW PASSAT" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- VW T-CROSS AUTOMAT -->
+                <div class="car-card car-card-custom car-type-suv" data-model="VW T-CROSS AUTOMAT" data-transmission="automatic" data-class="suv">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">VW T-CROSS</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">SUV Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="VW T-CROSS" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- FORD FOCUS -->
+                <div class="car-card car-card-custom car-type-compact" data-model="FORD FOCUS" data-transmission="manual" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">FORD FOCUS</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="FORD FOCUS" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- FORD MONDEO AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="FORD MONDEO AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">FORD MONDEO</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="FORD MONDEO" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- HYUNDAI TUCSON AUTOMAT -->
+                <div class="car-card car-card-custom car-type-suv" data-model="HYUNDAI TUCSON AUTOMAT" data-transmission="automatic" data-class="suv">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">HYUNDAI TUCSON</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">SUV Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="HYUNDAI TUCSON" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- OPEL ASTRA -->
+                <div class="car-card car-card-custom car-type-compact" data-model="OPEL ASTRA" data-transmission="manual" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">OPEL ASTRA</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="OPEL ASTRA" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- OPEL INSIGNIA AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="OPEL INSIGNIA AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">OPEL INSIGNIA</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="OPEL INSIGNIA" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- PEUGEOT 308 -->
+                <div class="car-card car-card-custom car-type-compact" data-model="PEUGEOT 308" data-transmission="manual" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">PEUGEOT 308</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="PEUGEOT 308" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- PEUGEOT 508 AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="PEUGEOT 508 AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">PEUGEOT 508</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="PEUGEOT 508" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- RENAULT CLIO -->
+                <div class="car-card car-card-custom car-type-mini" data-model="RENAULT CLIO" data-transmission="manual" data-class="mini">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">RENAULT CLIO</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Mini Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 2</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="RENAULT CLIO" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- RENAULT TRAFIC 8+1 -->
+                <div class="car-card car-card-custom car-type-van" data-model="RENAULT TRAFIC 8+1" data-transmission="manual" data-class="van">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">RENAULT TRAFIC 8+1</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Van Pasageri Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 9</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 6</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="RENAULT TRAFIC 8+1" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- TOYOTA AVENSIS AUTOMAT -->
+                <div class="car-card car-card-custom car-type-sedan" data-model="TOYOTA AVENSIS AUTOMAT" data-transmission="automatic" data-class="sedan">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">TOYOTA AVENSIS</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Sedan Automat</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 4</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Automat</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="TOYOTA AVENSIS" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
+                </div>
+                <!-- TOYOTA COROLLA -->
+                <div class="car-card car-card-custom car-type-compact" data-model="TOYOTA COROLLA" data-transmission="manual" data-class="compact">
+                  <div class="car-card-header-zone">
+                    <div class="car-card-title-row">
+                      <span class="main-title" contenteditable="true">TOYOTA COROLLA</span>
+                      <span class="similar-text" contenteditable="true">sau similar</span>
+                    </div>
+                    <div class="car-card-subtitle" contenteditable="true">Compact Manuală</div>
+                    <div class="car-card-badges">
+                      <span class="badge" contenteditable="true"><i class="fas fa-user"></i> 5</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-suitcase"></i> 3</span>
+                      <span class="badge" contenteditable="true"><i class="fas fa-cog"></i> Manuală</span>
+                    </div>
+                  </div>
+                  <div class="car-card-image-zone">
+                    <img class="car-card-image" src="/assets/images/placeholder-car.svg" alt="TOYOTA COROLLA" />
+                  </div>
+                  <div class="car-card-footer-zone">
+                    <div class="unlimited-km" contenteditable="true">
+                      <i class="fas fa-check"></i>
+                      300 KM incluși în preț
+                    </div>
+                    <div class="car-card-pricing-row">
+                      <span class="price-per-day"></span>
+                    </div>
+                  </div>
                 </div>
             </div>
         </main>
@@ -203,9 +604,9 @@
 
     <!-- FLOATING CONTACT BUTTONS -->
     <div class="floating-contacts">
-        <a href="mailto:contact@veironauto.ro" class="contact-btn email" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+40123456789" class="contact-btn phone" title="Phone"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/40123456789" class="contact-btn whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:veironauto@gmail.com" class="contact-btn email" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+40755622858" class="contact-btn phone" title="Phone"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/40755622858" class="contact-btn whatsapp" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="#top" class="contact-btn to-top" title="Back to top" id="toTopBtn"><i class="fas fa-arrow-up"></i></a>
     </div>
 
@@ -219,6 +620,7 @@
     <script src="assets/js/config.js"></script>
     <script src="assets/js/swiper-components.js"></script>
     <script src="assets/js/booking.js"></script>
+    <script src="assets/js/modele-masini-preturi.js"></script>
     <script src="assets/js/reservation-ro.js"></script>
     <script src="assets/js/sumar-rezervare.js"></script>
     <script src="assets/js/back-to-top.js"></script>
