@@ -25,8 +25,8 @@ function getCarPrice(model, days) {
   if (days >= 15) interval = '15-30';
   else if (days >= 8) interval = '8-14';
   else if (days >= 4) interval = '4-7';
-  // Return EUR, not RON
-  return car.prices[interval]?.eur || null;
+  // Return RON, not EUR
+  return car.prices[interval]?.ron || null;
 }
 
 // --- Main logic ---
@@ -91,26 +91,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Currency & Language Switch Logic ---
   let currentLang = 'ro';
-  // --- FIX: Use consistent eurRate = 0.20 everywhere ---
   const eurRate = 0.20; // 1 RON = 0.20 EUR, so 1 EUR = 5 RON
 
-  // --- Currency Conversion Policy ---
   /*
    * Currency Conversion Policy:
-   * - All base prices are stored in EUR.
-   * - For Romanian language (RO), prices are displayed in RON, converted using eurRate from config.
-   * - For English language (EN), prices are displayed in EUR (no conversion).
-   * - Conversion formula: RON = EUR * (1/eurRate)
-   * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 EUR = 5 RON)
+   * - All base prices are stored in RON.
+   * - For Romanian language (RO), prices are displayed in RON (no conversion).
+   * - For English language (EN), prices are displayed in EUR, converted using eurRate from config.
+   * - Conversion formula: EUR = RON * eurRate
+   * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 RON = 0.20 EUR, so 1 EUR = 5 RON)
    * - When saving reservations, always store the price in EUR.
    */
-  function formatPrice(priceEur, lang) {
+  function formatPrice(priceRon, lang) {
     if (lang === 'en') {
-      return `${priceEur.toFixed(2)} EUR`;
+      const eur = (priceRon * eurRate).toFixed(2);
+      return `${eur} EUR`;
     } else {
-      // RON = EUR * (1/eurRate)
-      const ron = (priceEur * (1/eurRate)).toFixed(2).replace('.', ',');
-      return `${ron} RON`;
+      return `${priceRon.toFixed(2).replace('.', ',')} RON`;
     }
   }
 
