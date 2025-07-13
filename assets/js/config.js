@@ -1,3 +1,12 @@
+/*
+ * Currency Conversion Policy:
+ * - All base prices are stored in EUR.
+ * - For Romanian language (RO), prices are displayed in RON, converted using eurRate from config.
+ * - For English language (EN), prices are displayed in EUR (no conversion).
+ * - Conversion formula: RON = EUR / eurRate
+ * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 RON = 0.20 EUR, so 1 EUR = 5 RON)
+ * - When saving reservations, always store the price in EUR.
+ */
 /**
  * Veiron Auto - Configuration File
  * Author: Veiron Auto Development Team

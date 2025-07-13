@@ -103,6 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentLang = 'en';
   const eurRate = (window.VeironConfig && window.VeironConfig.eurRate) ? window.VeironConfig.eurRate : 0.20;
 
+  /*
+   * Currency Conversion Policy:
+   * - All base prices are stored in EUR.
+   * - For Romanian language (RO), prices are displayed in RON, converted using eurRate from config.
+   * - For English language (EN), prices are displayed in EUR (no conversion).
+   * - Conversion formula: RON = EUR / eurRate
+   * - eurRate should reflect the value: 1 RON = eurRate EUR (ex: eurRate = 0.20 means 1 RON = 0.20 EUR, so 1 EUR = 5 RON)
+   * - When saving reservations, always store the price in EUR.
+   */
   function formatPrice(price, lang) {
     if (lang === 'en') {
       return `${price.toFixed(2)} EUR`;
